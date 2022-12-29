@@ -1,0 +1,12 @@
+jenkins: 
+    nodes:
+        - permanent:
+            name: "Ashu-node-jcasc"
+            remoteFS: "/home/jenkins"
+            launcher:
+                jnlp:
+                    workDirSettings:
+                        disabled: true
+                        failIfWorkDirIsMissing: false
+                        internalDir: "remoting"
+                        workDirPath: "/tmp"
