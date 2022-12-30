@@ -3,7 +3,7 @@ node {
         git url: 'https://github.com/ashutoshJadhav8/demo-JCASC-GIT.git', branch: 'main'
     }
     stage('pipelineMap jobs') {
-        jobList = sh (script: """ git ls-tree --full-tree -r --name-only HEAD|egrep -iv "default|readme.md|.groovy" | sed -e "s/.yaml//" | egrep
+        //jobList = sh (script: """ git ls-tree --full-tree -r --name-only HEAD|egrep -iv "default|readme.md|.groovy" | sed -e "s/.yaml//" | egrep
            """)
         jobList.each{
             def folderName = it.split('/')[0]
