@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: nginx
   labels:
-    app: nginx/busybox
+    app: nginx-busybox
     tier: frontend
 spec:
   containers:
