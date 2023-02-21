@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+        name: deployment-jenkins
+        labels:
+                app: deployment
+                type: frontend
+spec:
+        selector:
+                matchLabels:
+                        type: frontend
+        template:
+                metadata:
+                        name: deployment-jenkins-pod
+                        labels:
+                                app: jenkins
+                                type: frontend
+                spec:
+                        containers:
+                        - name: apache
+                          image: httpd
+        replicas: 1
